@@ -1,35 +1,38 @@
 import random
 
-def java_question_1():
+correct_answers = 0
+
+def java_question_1(tries):
+    global correct_answers 
     print("Question ID: 0002")
     print("Programming Language: Java")
-    print("Tries Allowed: 3\n")
 
     print("How to print Hello World!")
 
-    for i in range(3):
+    for i in range(tries):
         answer = input()
         if answer == 'System.out.println("Hello World!");':
             print("Success!")
+            correct_answers += 1
             break
         else:
-            if i == 2:
+            if (tries - i) == 1:
                 print("Failure!")
                 print("Do you want to know the correct answer? Input yes or no.")
                 truth = input()
                 if truth == "Yes" or truth == "yes":
                     print("Correct Answer:")
                     print('System.out.println("Hello World!");')
-            elif i == 1:
+            elif (tries - i) == 2:
                 print("You only have 1 try left.")
             else:
-                print("You only have 2 tries left.")
+                print("You only have " + str(tries - i - 1) +" tries left.")
 
 
-def java_question_2():
+def java_question_2(tries):
+    global correct_answers
     print("Question ID: 0005")
     print("Programming Language: Java")
-    print("Tries Allowed: 3")
 
     print("What does the void keyword mean for a method?")
     firstQuestion = "A non-access modifier. Used for classes and methods.\n" \
@@ -55,29 +58,30 @@ def java_question_2():
             foundIndex = i + 1
 
 
-    for i in range(3):
+    for i in range(tries):
         answer = input()
         if int(answer) == foundIndex:
             print("Success!")
+            correct_answers += 1
             break
         else:
-            if i == 2:
+            if (tries - i) == 1:
                 print("Failure!")
                 print("Do you want to know the correct answer? Input yes or no.")
                 truth = input()
                 if truth == "Yes" or truth == "yes":
                     print("Correct Answer:")
                     print('Specifies that a method should not have a return value.')
-            elif i == 1:
+            elif (tries - i) == 2:
                 print("You only have 1 try left.")
             else:
-                print("You only have 2 tries left.")
+                print("You only have " + str(tries - i - 1) +" tries left.")
 
 
-def java_question_3():
+def java_question_3(tries):
+    global correct_answers
     print("Question ID: 0006")
     print("Programming Language: Java")
-    print("Tries Allowed: 3")
 
     print("What does the static keyword mean for a method?")
     firstQuestion = "A non-access modifier. Used for classes and methods.\n" \
@@ -105,13 +109,14 @@ def java_question_3():
             foundIndex = i + 1
 
 
-    for i in range(3):
+    for i in range(tries):
         answer = input()
         if int(answer) == foundIndex:
             print("Success!")
+            correct_answers += 1
             break
         else:
-            if i == 2:
+            if (tries - i) == 1:
                 print("Failure!")
                 print("Do you want to know the correct answer? Input yes or no.")
                 truth = input()
@@ -119,10 +124,13 @@ def java_question_3():
                     print("Correct Answer:")
                     print('A non-access modifier used for methods and attributes.\n" \
                     "Static methods/attributes can be accessed without creating an object of a class.')
-            elif i == 1:
+            elif (tries - i) == 2:
                 print("You only have 1 try left.")
             else:
-                print("You only have 2 tries left.")
+                print("You only have " + str(tries - i - 1) +" tries left.")
+
+def total_correct():
+    return correct_answers
 
 def send_questions():
     return [java_question_1, java_question_2, java_question_3]
