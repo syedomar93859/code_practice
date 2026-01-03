@@ -4,9 +4,7 @@ correct_answers = 0
 
 def java_question_1(tries):
     global correct_answers 
-    print("Question ID: 0002")
     print("Programming Language: Java")
-
     print("How to print Hello World!")
 
     for i in range(tries):
@@ -31,9 +29,7 @@ def java_question_1(tries):
 
 def java_question_2(tries):
     global correct_answers
-    print("Question ID: 0005")
     print("Programming Language: Java")
-
     print("What does the void keyword mean for a method?")
     firstQuestion = "A non-access modifier. Used for classes and methods.\n" \
                     "A void class cannot be used to create objects(to access it, it must be inherited from another class).\n" \
@@ -80,9 +76,7 @@ def java_question_2(tries):
 
 def java_question_3(tries):
     global correct_answers
-    print("Question ID: 0006")
     print("Programming Language: Java")
-
     print("What does the static keyword mean for a method?")
     firstQuestion = "A non-access modifier. Used for classes and methods.\n" \
                     "A static class cannot be used to create objects(to access it, it must be inherited from another class).\n" \

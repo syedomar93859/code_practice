@@ -4,9 +4,7 @@ correct_answers = 0
 
 def python_question_1(tries):
     global correct_answers 
-    print("Question ID: 0001")
     print("Programming Language: Python")
-
     print("How to print Hello World!")
 
     for i in range(tries):

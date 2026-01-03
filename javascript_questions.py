@@ -4,9 +4,7 @@ correct_answers = 0
 
 def javascript_question_1(tries):
     global correct_answers 
-    print("Question ID: 0004")
     print("Programming Language: Javascript")
-
     print("How to print Hello World! to console")
 
     for i in range(tries):
