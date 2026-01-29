@@ -42,3 +42,10 @@ python_question_generator('multiple_choice', 1, 'What is the output of the follo
 // } else {
 //     console.log('password is not strong enough!');
 // }
+
+function myFunction() {
+    const inputElement = document.getElementById("myText");
+    const userAnswer = inputElement.value;
+
+    console.log("User entered:", userAnswer);
+}
