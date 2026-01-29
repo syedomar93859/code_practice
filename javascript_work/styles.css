@@ -14,3 +14,7 @@ button.active {
     background-color: #4caf50;
     color: white;
 }
+
+.quiz-creation {
+    margin-top: 16px;
+}

@@ -10,11 +10,21 @@
     <h1>Quiz Creator For Programming Practice</h1>
     <p>This is a tool to help you create quizzes for programming practice.</p>
 
-    <button onclick="toggleLanguage(this)" data-language="Python">Python</button>
-    <button onclick="toggleLanguage(this)" data-language="Java">Java</button>
-    <button onclick="toggleLanguage(this)" data-language="C">C</button>
+    <div class="language-selection">
+        <button onclick="toggleLanguage(this)" data-language="Python">Python</button>
+        <button onclick="toggleLanguage(this)" data-language="Java">Java</button>
+        <button onclick="toggleLanguage(this)" data-language="C">C</button>
+    </div>
 
-    <button onclick="quizCreator()">Create Quiz</button>
+    <p>How many tries per question?</p>
+
+    <div class="tries-selection">
+        <input type="text" id="myText" placeholder="Some text...">
+    </div>
+
+    <div class="quiz-creation">
+        <button onclick="quizCreator()">Create Quiz</button>
+    </div>
 
     <p class="quiz"></p>
 
