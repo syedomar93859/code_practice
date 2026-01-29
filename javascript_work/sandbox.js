@@ -29,6 +29,7 @@ function numTries() {
 
 
 function quizCreator() {
+    quizQuestions.clear();
     console.log("Creating quiz...");
     if (selectedLanguages.has('Python')) {
         const pythonQuestions = python_question_generator();
@@ -60,6 +61,8 @@ function quizCreator() {
     quizQuestions.forEach(q => {
         const totalTries = tries;
         let currTries = 0;
+
+        console.log('Question type:', q.type);
 
         const question = document.createElement('p');
         if (q.type === 'Multiple Choice'){

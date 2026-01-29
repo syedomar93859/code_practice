@@ -7,5 +7,5 @@ let c_question_1 = {
 
 export function c_question_generator(){
     console.log(`Programming Language: C`);
-    return c_question_1;
+    return [c_question_1];
 };

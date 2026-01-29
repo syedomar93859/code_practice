@@ -7,6 +7,6 @@ let python_question_1 = {
 
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
-    return python_question_1;
+    return [python_question_1];
 };
 
