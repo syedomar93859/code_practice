@@ -80,27 +80,20 @@ function quizCreator() {
                 alert(`Out of tries!`);
                 question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: 0`;
                 submitButton.disabled = true;
-            }else {
+
+                const solution = document.createElement('p');
+                solution.innerHTML = `Solution: ${q.answer}`;
+
+                submitButton.insertAdjacentElement('afterend', solution);
+
+
+            } else {
                 alert(`Incorrect!`);
                 currTries++;
                 console.log(currTries);
                 question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - currTries}`;
             }
         };
-
-
-        // for (let i = 0; i < totalTries; i++) {
-        //     console.log(i);
-        //     submitButton.onclick = () => {
-        //         const userAnswer = answerInput.value;
-        //         if (userAnswer === q.answer) {
-        //             alert('Correct!');
-        //         } else {
-        //             alert(`Incorrect! The correct answer is: ${q.answer}`);
-        //             question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question}  <br> Tries Left: ${totalTries - i}`;
-        //         }
-        //     };
-        // }
 
         content.appendChild(submitButton);
     });
