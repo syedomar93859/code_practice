@@ -88,6 +88,9 @@ function quizCreator() {
                 alert('Correct!');
                 submitButton.disabled = true;
 
+                currTries++;
+                question.innerHTML = `Programming Language: ${q.language} <br> Question Type: ${q.type} <br> Question: ${q.question} <br> Choices: <br> ${q.options.join('<br>')} <br> Tries Left: ${totalTries - currTries}`;
+
                 const solution = document.createElement('p');
                 if (q.type === 'Multiple Choice'){
                     solution.innerHTML = `Solution: ${q.solution}`;
