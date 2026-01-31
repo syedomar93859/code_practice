@@ -3,3 +3,8 @@ Score system
 Explanation
 Better question layout
 More interactive questions 
+T/F Questions
+Select All That Apply Questions
+
+create question about *p being a pointer in c
+explain address in c like &x which is the address of variable x when it was intialized before
