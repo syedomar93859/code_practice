@@ -81,4 +81,4 @@ def total_correct():
     return correct_answers
 
 def send_questions():
-    return [python_question_1]
+    return [python_question_1, python_question_2, python_question_3]

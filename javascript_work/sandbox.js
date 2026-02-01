@@ -6,6 +6,13 @@ const selectedLanguages = new Set();
 
 const quizQuestions = new Set();
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 function toggleLanguage(button) {
     const language = button.dataset.language;
 
@@ -20,13 +27,18 @@ function toggleLanguage(button) {
 }
 
 function numTries() {
-    let tries = document.getElementById("myText").value;
-    if (tries.trim() === "") {
-        tries = 3;
+    let triesInput = document.getElementById("triesPerQuestion"); 
+    
+    if (!triesInput || triesInput.value.trim() === "") {
+        return 3; // Default value
     }
-    return Number(tries);
+    return Number(triesInput.value);
 }
 
+function totalQuestions() {
+    let numQuestions = document.getElementById("numberOfQuestions").value;
+    return Number(numQuestions);
+}
 
 function quizCreator() {
     quizQuestions.clear();
@@ -50,15 +62,22 @@ function quizCreator() {
         }
     }
 
+    let questionsArray = Array.from(quizQuestions);
+    shuffleArray(questionsArray);
+
     let tries = numTries();
     console.log(`Number of tries per question: ${tries}`);
 
+    const numQuestions = totalQuestions();
+
     console.log([...selectedLanguages]);
+
+    const finalQuestions = questionsArray.slice(0, numQuestions);
 
     const content = document.querySelector('.quiz');
     content.innerHTML = ''; // Clear previous content
 
-    quizQuestions.forEach(q => {
+    finalQuestions.forEach(q => {
         let letteredChoices = [];
         const totalTries = tries;
         let currTries = 0;
