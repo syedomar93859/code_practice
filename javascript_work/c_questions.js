@@ -1,6 +1,7 @@
 let c_question_1 = {
     language: 'C',
     type: 'Written',
+    difficulty: 'Easy',
     question: 'How to print "Hello, World!"',
     answer: 'printf("Hello, World!");',
 };
@@ -8,6 +9,7 @@ let c_question_1 = {
 let c_question_2 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'What does the following declaration mean: const int *p;',
     options: [
         'p is a pointer to a constant integer.',
@@ -28,6 +30,7 @@ let c_question_2 = {
 let c_question_3 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'Which function is commonly used to read formatted input from the keyboard?',
     options: [
         'scanf()',
@@ -49,6 +52,7 @@ let c_question_3 = {
 let c_question_4 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'With the following: <br> int x = 5; <br> int *p = &x; <br> What does *p evaluate to?',
     options: [
         '5',
@@ -70,6 +74,7 @@ let c_question_4 = {
 let c_question_5 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'What is the index of the first element in a C array?',
     options: [
         '0',
@@ -90,6 +95,7 @@ let c_question_5 = {
 let c_question_6 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'What does sizeof(int) return?',
     options: [
         'Number of bytes required to store an object of type int',
@@ -110,6 +116,7 @@ let c_question_6 = {
 let c_question_7 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'Which keyword is used to define a structure?',
     options: [
         'struct',
@@ -132,6 +139,7 @@ let c_question_7 = {
 let c_question_8 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'Which C function allocates a block of uninitialized memory at runtime?',
     options: [
         'malloc()',
@@ -154,6 +162,7 @@ let c_question_8 = {
 let c_question_9 = {
     language: 'C',
     type: 'Multiple Choice',
+    difficulty: 'Easy',
     question: 'What keyword is used to prevent fall-through in a switch statement?',
     options: [
         'break',
