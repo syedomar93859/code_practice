@@ -19,10 +19,32 @@ let python_question_3 = {
     answer: 'x = 11',
 };
 
+let python_question_4 = {
+    language: 'Python',
+    type: 'Multiple Choice',
+    question: 'What does the following print in Python? <br> x = 4<br>x = "Sally"<br>print(x)',
+    options: [
+        '4',
+        'Sally',
+        'Error',
+        'None',
+    ],
+    solution: 'Sally',
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+    
+};
 
+// x = 4       # x is of type int
+// x = "Sally" # x is now of type str
+// print(x)
 
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
-    return [python_question_1, python_question_2, python_question_3];
+    return [python_question_1, python_question_2, python_question_3, python_question_4];
 };
 

@@ -5,6 +5,8 @@ Better question layout
 More interactive questions 
 T/F Questions
 Select All That Apply Questions
+Add difficulty for each question
+rename this project because code_practice is not a good name
 
 create question about *p being a pointer in c
 explain address in c like &x which is the address of variable x when it was intialized before
