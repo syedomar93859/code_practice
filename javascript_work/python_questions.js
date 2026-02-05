@@ -63,10 +63,30 @@ let python_question_5 = {
     
 };
 
+let python_question_6 = {
+    language: 'Python',
+    type: 'Multiple Choice',
+    difficulty: 'Easy',
+    question: 'What is printed from the following code: <br> name = "John" <br> print(type(name))',
+    options: [
+        "&lt;class 'int'&gt;", // Use HTML entities for < and >
+        "&lt;class 'str'&gt;",
+        "&lt;class 'bool'&gt;",
+        'Returns an error',
+    ],
+    solution: "&lt;class 'str'&gt;", // This MUST match the option exactly
+    randomize: function() {
+        for (let i = this.options.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.options[i], this.options[j]] = [this.options[j], this.options[i]];
+        }
+    },
+};
+
 
 
 export function python_question_generator(){
     console.log(`Programming Language: Python`);
-    return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5];
+    return [python_question_1, python_question_2, python_question_3, python_question_4, python_question_5, python_question_6];
 };
 
