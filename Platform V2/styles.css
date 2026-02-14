@@ -3,3 +3,8 @@ h1 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 60px;
 }
+
+#something {
+    width: 100%;
+    max-width: 400px;
+}
