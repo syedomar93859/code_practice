@@ -1,6 +1,6 @@
-import { python_question_generator } from './python_questions.js';
-import { java_question_generator } from './java_questions.js';
-import { c_question_generator } from './c_questions.js';
+import { python_question_generator } from './python-questions.js';
+import { java_question_generator } from './java-questions.js';
+import { c_question_generator } from './c-questions.js';
 
 const selectedLanguages = new Set();
 
